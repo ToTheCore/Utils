@@ -164,34 +164,38 @@ end
 -- @param[opt=term] monitor Outputmonitor for the message.
 function WriteLine(msgType, message, monitor)
   monitor = monitor or term
-
+  
   -- Check msgType.
   IsValidType(msgType)
 
-  -- Write day, time in gray.
-  SetTextColor(colors.lightGray, monitor)
-  monitor.write(getHeadDayTime()) -- Correct padRight, added day length.
+  mWidth, _ = monitor.getSize()
 
-  -- Write message type with correct color code and correct spacing for table like look.
-  local typeText = msgType
-  local typeTextSpacing = StringUtils.PadRight("", longestTypeTextLength - #msgType)
-  SetTextColor(GetColorForType(msgType), monitor)
-  monitor.write(msgType)
-  SetTextColor(colors.lightGray, monitor)
-  monitor.write(typeTextSpacing)
-  monitor.write("|")
- 
-  -- Message is line -> gray message color.
-  if (msgType == Type.Line) then
-    SetTextColor(colors.gray, monitor)
-  elseif (msgType == Type.Warn) then -- Message is warn -> orange message color.
-    SetTextColor(colors.orange, monitor)
-  elseif (msgType == Type.Error) then -- Message is error -> red message color.
-    SetTextColor(colors.red, monitor)
-  else --> Other messages -> white message color.
-    SetTextColor(colors.white, monitor)
+  -- TODO: Think about better solution.
+  if(mWidth > 15) then  
+    -- Write day, time in gray.
+    SetTextColor(colors.lightGray, monitor)
+    monitor.write(getHeadDayTime()) -- Correct padRight, added day length.
+
+    -- Write message type with correct color code and correct spacing for table like look.
+    local typeText = msgType
+    local typeTextSpacing = StringUtils.PadRight("", longestTypeTextLength - #msgType)
+    SetTextColor(GetColorForType(msgType), monitor)
+    monitor.write(msgType)
+    SetTextColor(colors.lightGray, monitor)
+    monitor.write(typeTextSpacing)
+    monitor.write("|")
+  
+    -- Message is line -> gray message color.
+    if (msgType == Type.Line) then
+      SetTextColor(colors.gray, monitor)
+    elseif (msgType == Type.Warn) then -- Message is warn -> orange message color.
+      SetTextColor(colors.orange, monitor)
+    elseif (msgType == Type.Error) then -- Message is error -> red message color.
+      SetTextColor(colors.red, monitor)
+    else --> Other messages -> white message color.
+      SetTextColor(colors.white, monitor)
+    end
   end
-
   -- Write message with linefeed at the end.
   monitor.write(message)
   CursorToNextLine(monitor)
