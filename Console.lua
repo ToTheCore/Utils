@@ -137,7 +137,7 @@ end
 --- "[XX:XX|XX]"
 -- @returns Color free string with this format: "[XX:XX|XX]".
 function getHeadDayTime()
-  return Utils.padRight(
+  return StringUtils.PadRight(
           textutils.formatTime(os.time(), true)  -- Current time in 24H
           .. " " .. os.day()                     -- Minecraft world day.
           .. "|", 6 + #tostring(os.day()))
@@ -154,7 +154,7 @@ function getMessageHeadLength(msgType)
 
   -- Write message type with correct spacing for table like look and return length of it.
   local messageHeadLength = #getHeadDayTime()
-  local typeTextSpacing = Utils.padRight("", longestTypeTextLength - #msgType) .. "|"
+  local typeTextSpacing = StringUtils.PadRight("", longestTypeTextLength - #msgType) .. "|"
   return messageHeadLength + #msgType + #typeTextSpacing
 end
 
@@ -174,7 +174,7 @@ function WriteLine(msgType, message, monitor)
 
   -- Write message type with correct color code and correct spacing for table like look.
   local typeText = msgType
-  local typeTextSpacing = Utils.padRight("", longestTypeTextLength - #msgType)
+  local typeTextSpacing = StringUtils.PadRight("", longestTypeTextLength - #msgType)
   SetTextColor(GetColorForType(msgType), monitor)
   monitor.write(msgType)
   SetTextColor(colors.lightGray, monitor)
@@ -209,7 +209,7 @@ function PrintLine(printChr, monitor)
   end
 
   local consoleWidth, consoleHeight = monitor.getSize()
-  WriteLine(Type.Line, Utils.padRight("", consoleWidth - getMessageHeadLength(Type.Line), printChr), monitor)
+  WriteLine(Type.Line, StringUtils.PadRight("", consoleWidth - getMessageHeadLength(Type.Line), printChr), monitor)
 end
 
 -- Call of init function
