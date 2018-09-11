@@ -10,5 +10,5 @@ if(not os.loadAPI(path)) then
 end
 
 -- Include other utils.
-CodingUtils.Include("StringUtils")
-CodingUtils.Include("Console")
+CodingUtils.Include("/Utils/StringUtils")
+CodingUtils.Include("/Utils/Console")
