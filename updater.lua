@@ -9,6 +9,6 @@ shell.run("delete", "/Utils/CodingUtils")
 shell.run("delete", "/Utils/Utils")
 
 -- Runn installer to get all new files.
-shell.run("installer")
+shell.run("/Utils/installer")
 term.setTextColor(colors.green)
 print("Done.")
