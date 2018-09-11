@@ -15,6 +15,8 @@ print("Downloading \"" .. thisRepoName .. "\" files..")
 term.setTextColor(colors.gray)
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/Console.lua","/" .. thisRepoName .. "/Console")
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/StringUtils.lua","/" .. thisRepoName .. "/StringUtils")
+shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/CodingUtils.lua","/" .. thisRepoName .. "/CodingUtils")
+shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/Utils.lua","/" .. thisRepoName .. "/Utils")
 
 -- Downloading installer/updater
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater")
