@@ -17,6 +17,7 @@ shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/Conso
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/StringUtils.lua","/" .. thisRepoName .. "/StringUtils")
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/CodingUtils.lua","/" .. thisRepoName .. "/CodingUtils")
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/Utils.lua","/" .. thisRepoName .. "/Utils")
+shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/Ui.lua","/" .. thisRepoName .. "/Ui")
 
 -- Downloading installer/updater
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater")
