@@ -5,7 +5,7 @@ if (not fs.exists(codingUtilsPath)) then
   error("[FATAL ERROR] Can't find libary \"" .. codingUtilsPath .. "\".")
 end
 -- path not loadable -> error.
-if(not os.loadAPI(path)) then
+if(not os.loadAPI(codingUtilsPath)) then
   error("[FATAL ERROR] Can't load libary \"" .. codingUtilsPath .. "\".")
 end
 
