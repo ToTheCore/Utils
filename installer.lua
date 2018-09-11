@@ -16,3 +16,7 @@ term.setTextColor(colors.gray)
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/Console.lua","/" .. thisRepoName .. "/Console")
 shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/StringUtils.lua","/" .. thisRepoName .. "/StringUtils")
 
+-- Downloading installer/updater
+shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater")
+shell.run("/openp/github", "get", "ToTheCore/" .. thisRepoName .. "/master/installer.lua","/" .. thisRepoName .. "/installer")
+
