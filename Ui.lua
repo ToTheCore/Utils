@@ -1,3 +1,4 @@
+os.loadAPI("/Utils/Utils") -- Load all Utils
 --- Contains a few UI tools.
 -- TODO: Remove
 local testMonitor = peripheral.wrap("left")
