@@ -33,7 +33,7 @@ That's all.
 The Console class contains the following functions:
 ```lua
 --- Function just flooded the console with empty prints.
---@param[opt=term] monitor Monitor wich should be cleaned.
+-- @param[opt=term] monitor Monitor wich should be cleaned.
 Console.ClearScreen(monitor)
 
 --- Initalize the console api.
@@ -88,7 +88,12 @@ Console.WriteLine(msgType, message, monitor)
 
 The following msgType can be used for the Console.WriteLine() function.
 ```lua
-  local m = peripheral.wrap("left")
+  -- Prepare monitor.
+  local m = peripheral.wrap("top")
+  m.clear()
+  m.setTextScale(0.5)
+  
+  -- Write messages.
   Console.WriteLine(Console.Type.Info, "Message with the type Info", m)
   Console.WriteLine(Console.Type.Warn, "Message with the type Warn ", m)
   Console.WriteLine(Console.Type.Error, "Message with the type Error ", m)
@@ -99,5 +104,7 @@ The following msgType can be used for the Console.WriteLine() function.
   Console.WriteLine(Console.Type.Hint, "Message with the type Hint ", m)
   Console.WriteLine(Console.Type.Export, "Message with the type Export", m)
 ```
+
+![Console Types](https://github.com/ToTheCore/Documentation/blob/master/Screenshots/Utils_ConsoleTypes.png?raw=true)
 
 
