@@ -29,7 +29,6 @@ function numformat(number)
   return number
 end
 
-
 -- Formats big numbers, e.g. 1234 to 1,2k and 1234567 to 1,2m
 function numformatk(number)
     if string.len(number) < 4 then
@@ -37,6 +36,8 @@ function numformatk(number)
       number = string.gsub(number, "^(-?%d+)(%d)(%d)(%d)", '%1,%2'.." k")
     elseif string.len(number) < 10 then
       number = string.gsub(number, "^(-?%d+)(%d)(%d)(%d)(%d%d%d)", '%1,%2'.." m")
-    else number = string.gsub(number, "^(-?%d+)(%d%d%d)(%d%d%d)(%d%d%d)(%d%d%d)", '%1.%2'.." m")
+    else 
+      number = string.gsub(number, "^(-?%d+)(%d%d%d)(%d%d%d)(%d%d%d)(%d%d%d)", '%1.%2'.." m")
+    end
   return number
 end
