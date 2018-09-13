@@ -48,6 +48,8 @@ function ClearScreen(monitor)
   monitor.clear()
 end
 
+
+
 --- Initalize the console api.
 --- Gets then length of the longest type text.
 function Init()
