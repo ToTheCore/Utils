@@ -1,15 +1,7 @@
 -- Console handler
 -- User for console output.
 
-local UtilsLibaryPath = "/Utils/StringUtils"
--- "/Utils/StringUtils.lua" not found -> error.
-if (not fs.exists(UtilsLibaryPath)) then
-  error("[FATAL ERROR][CONSOLE] Can't find libary \"" .. UtilsLibaryPath .. "\".")
-end
--- "Utils.lua" not loadable -> error.
-if(not os.loadAPI(UtilsLibaryPath)) then
-  error("[FATAL ERROR][CONSOLE] Can't load libary \"" .. UtilsLibaryPath .. "\".")
-end
+os.loadAPI("/Utils/Utils") -- Load all Utils
 
 --- Message types. Used for formatted console output.
 --- IMPORTANT: Be sure, that there is a "ColorType" for each "Type".
@@ -47,8 +39,6 @@ function ClearScreen(monitor)
   monitor.setCursorPos(1,1)
   monitor.clear()
 end
-
-
 
 --- Initalize the console api.
 --- Gets then length of the longest type text.

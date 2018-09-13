@@ -9,7 +9,7 @@ if(not os.loadAPI(codingUtilsPath)) then
   error("[FATAL ERROR] Can't load libary \"" .. codingUtilsPath .. "\".")
 end
 
--- Include other utils.
-CodingUtils.Include("/Utils/StringUtils")
-CodingUtils.Include("/Utils/Console")
-CodingUtils.Include("/Utils/Ui")
+-- include other utils.
+CodingUtils.include("/Utils/StringUtils")
+CodingUtils.include("/Utils/Console")
+CodingUtils.include("/Utils/Ui")
