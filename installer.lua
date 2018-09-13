@@ -18,6 +18,8 @@ shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoNam
 shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/CodingUtils.lua","/" .. thisRepoName .. "/CodingUtils", "-silent")
 shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Utils.lua","/" .. thisRepoName .. "/Utils", "-silent")
 shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Ui.lua","/" .. thisRepoName .. "/Ui", "-silent")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/5DMan.lua","/" .. thisRepoName .. "/5DMan", "-silent")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Tabble.lua","/" .. thisRepoName .. "/Table", "-silent")
 
 -- Downloading installer/updater
 shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater", "-silent")

@@ -8,6 +8,8 @@ shell.run("delete", "/Utils/updater")
 shell.run("delete", "/Utils/CodingUtils")
 shell.run("delete", "/Utils/Utils")
 shell.run("delete", "/Utils/Ui")
+shell.run("delete", "/Utils/Table")
+shell.run("delete", "/Utils/5DMan")
 
 -- Runn installer to get all new files.
 shell.run("/Utils/installer")
