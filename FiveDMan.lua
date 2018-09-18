@@ -8,12 +8,12 @@
 --TODO: Write config manager
 --TODO: create issue for this.
 function LoadConfig()
-  settingsFilePath = shell.resolve("./FiveDManConfig")
+  settingsFilePath = "/Utils/FiveDManConfig"
 
   -- There is no settings file? -> create one.
   if (not fs.exists(settingsFilePath)) then
-    Console.WriteLine(Console.Type.Warn, 'There is no "./FiveDManConfig" file.')
-    Console.WriteLine(Console.Type.Hint, 'Creating new "./FiveDManConfig" with default settings..')
+    Console.WriteLine(Console.Type.Warn, 'There is no "' .. settingsFilePath .. '" file.')
+    Console.WriteLine(Console.Type.Hint, 'Creating new "'.. settingsFilePath .. '" with default settings..')
 
     -- Write settings.
     local file = io.open(filePath, "w")
@@ -24,7 +24,7 @@ function LoadConfig()
   end
 
   -- Load settings file
-  Console.WriteLine(Console.Type.Init, 'Loading config "./FiveDManConfig".')
+  Console.WriteLine(Console.Type.Init, 'Loading config "' .. settingsFilePath .. '".')
   os.loadAPI(settingsFilePath)
 end
 LoadConfig()
