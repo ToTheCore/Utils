@@ -65,7 +65,7 @@ function Send(targetLabel, valueString)
   targetLabel = CodingUtils.encode_url(targetLabel)
   CodingUtils.http_string(
     FiveDManConfig.host ..
-      "?command=sendScript&sourceId=" .. myId .. "&TargetLabel=" .. targetLabel .. "&Value=" .. valueString
+      "?command=send&sourceId=" .. myId .. "&TargetLabel=" .. targetLabel .. "&Value=" .. valueString
   )
 end
 
