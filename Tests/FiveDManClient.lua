@@ -8,6 +8,8 @@ function writeActions()
   Console.WriteLine(Console.Type.Hint, "[1] Content, [1e] Example content")
 end
 
+Console.Clear()
+
 while(true) do
   writeActions()
   -- Read and check user input.
