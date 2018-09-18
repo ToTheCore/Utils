@@ -16,7 +16,7 @@ function LoadConfig()
     Console.WriteLine(Console.Type.Hint, 'Creating new "'.. settingsFilePath .. '" with default settings..')
 
     -- Write settings.
-    local file = io.open(filePath, "w")
+    local file = io.open(settingsFilePath, "w")
     file:write('host = "http://ruffo.ddns.net:8080/Github/ToTheCore/WebAPI/5DMan.php" -- PHP file \n')
     file:close()
 
