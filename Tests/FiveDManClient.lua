@@ -8,7 +8,7 @@ function writeActions()
   Console.WriteLine(Console.Type.Hint, "[1] Content, [1e] Example content")
 end
 
-Console.Clear()
+Console.ClearScreen()
 
 while(true) do
   writeActions()
@@ -41,7 +41,7 @@ while(true) do
     FiveDMan.SendScript(TestServerLabel, example)
   end
 
-  Console.Clear()
+  Console.ClearScreen()
   Console.WriteLine(Console.Type.Hint, "Done.. Check server if successfull.")
 
 end
