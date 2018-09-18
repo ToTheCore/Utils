@@ -25,7 +25,7 @@ while(true) do
 
     FiveDMan.Send(TestServerLabel, content)
   elseif(input == "0e") then
-    local example = "myLabel = os.getComputerLabel() Console.WriteLine(Console.Type.Warn, \"Hello warn from \" .. myLabel .. \")"
+    local example = "myLabel = os.getComputerLabel() Console.WriteLine(Console.Type.Warn, \"Hello warn from \" .. myLabel)"
 
     Console.WriteLine(Console.Type.Info, "Example script:")
     Console.WriteLine(Console.Type.Hint, example)
