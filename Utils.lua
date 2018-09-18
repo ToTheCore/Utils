@@ -1,3 +1,6 @@
+
+-- Use: os.loadAPI("/Utils/Utils") -- Load all Utils
+
 -- Try loading CodingUtils file.
 local codingUtilsPath = "/Utils/CodingUtils"
 -- path not found -> error.
@@ -13,3 +16,6 @@ end
 CodingUtils.include("/Utils/StringUtils")
 CodingUtils.include("/Utils/Console")
 CodingUtils.include("/Utils/Ui")
+CodingUtils.include("/Utils/FiveDMan")
+CodingUtils.include("/Utils/Table")
+

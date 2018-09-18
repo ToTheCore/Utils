@@ -9,7 +9,7 @@ shell.run("delete", "/Utils/CodingUtils")
 shell.run("delete", "/Utils/Utils")
 shell.run("delete", "/Utils/Ui")
 shell.run("delete", "/Utils/Table")
-shell.run("delete", "/Utils/5DMan")
+shell.run("delete", "/Utils/FiveDMan")
 
 -- Runn installer to get all new files.
 shell.run("/Utils/installer")
