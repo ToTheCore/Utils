@@ -129,13 +129,13 @@ end
 --- "[XX:XX|XX]"
 -- @returns Color free string with this format: "[XX:XX|XX]".
 function getHeadDayTime()
-  mWidth, _ = monitor.getSize()
+  mWidth, _ = term.getSize()
 
   -- Pocket device -> ignore day & time
   if(mWidth == 26) then
     return ""
   end
-  
+
   return StringUtils.PadRight(
           textutils.formatTime(os.time(), true)  -- Current time in 24H
           .. " " .. os.day()                     -- Minecraft world day.
