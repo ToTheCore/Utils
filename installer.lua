@@ -22,8 +22,8 @@ shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoNam
 shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Table.lua","/" .. thisRepoName .. "/Table", "-silent")
 
 -- Tester
-shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Tests/FiveDManServer.lua","/" .. thisRepoName .. "/Test/FiveDManServer", "-silent")
-shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Tests/FiveDManClient.lua","/" .. thisRepoName .. "/Test/FiveDManClient", "-silent")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Tests/FiveDManServer.lua","/" .. thisRepoName .. "/Tests/FiveDManServer", "-silent")
+shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/Tests/FiveDManClient.lua","/" .. thisRepoName .. "/Tests/FiveDManClient", "-silent")
 
 -- Downloading installer/updater
 shell.run("/wget", "https://raw.githubusercontent.com/ToTheCore/" .. thisRepoName .. "/master/updater.lua","/" .. thisRepoName .. "/updater", "-silent")
