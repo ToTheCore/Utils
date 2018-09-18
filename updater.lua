@@ -11,6 +11,11 @@ shell.run("delete", "/Utils/Ui")
 shell.run("delete", "/Utils/Table")
 shell.run("delete", "/Utils/FiveDMan")
 
+-- Tests
+shell.run("delete", "/Utils/Tests/FiveDManServer")
+shell.run("delete", "/Utils/Tests/FiveDManClient")
+
+
 -- Runn installer to get all new files.
 shell.run("/Utils/installer")
 term.setTextColor(colors.green)

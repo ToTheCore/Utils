@@ -44,7 +44,7 @@ Console.WriteLine(Console.Type.Info, "FiveDManId: " .. myId)
 --- Returns all new messages in the following table format:
 --- {
 ---   {source="sourceLabel", value="Value", isScript=false},
----   {source="sourceLabel", value="Value", isScript=true} 
+---   {source="sourceLabel", value="Value", isScript=true}
 --- }
 function Fetch()
   loadstring(CodingUtils.http_string(FiveDManConfig.host .. "?command=fetch&sourceId=" .. myId))()
@@ -52,11 +52,17 @@ function Fetch()
 end
 
 function SendScript(targetLabel, scriptString)
-  CodingUtils.http_string(FiveDManConfig.host .. "?command=sendScript&sourceId=" .. myId .. "&TargetLabel="..targetLabel .. "&Value=" .. scriptString)
+  CodingUtils.http_string(
+    FiveDManConfig.host ..
+      "?command=sendScript&sourceId=" .. myId .. "&TargetLabel=" .. targetLabel .. "&Value=" .. scriptString
+  )
 end
 
 function Send(targetLabel, valueString)
-  CodingUtils.http_string(FiveDManConfig.host .. "?command=sendScript&sourceId=" .. myId .. "&TargetLabel="..targetLabel .. "&Value=" .. valueString)
+  CodingUtils.http_string(
+    FiveDManConfig.host ..
+      "?command=sendScript&sourceId=" .. myId .. "&TargetLabel=" .. targetLabel .. "&Value=" .. valueString
+  )
 end
 
 ---5DMan.register(string "name", number x, number y, number z): string // returns session id.
