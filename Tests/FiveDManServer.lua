@@ -12,10 +12,9 @@ while(true) do
   latestFetch = FiveDMan.Fetch()
   for num, fetch in pairs(latestFetch) do
     Console.WriteLine(Console.Type.Info, "sourcePC: " .. fetch.source .. " isScript: " .. tostring(fetch.isScript))
+    Console.WriteLine(Console.Type.Debug, "Value: " .. tostring(fetch.value))
     if(fetch.isScript) then
       loadstring(fetch.value)
-    else
-      Console.WriteLine(Console.Type.Info, "Content: " .. tostring(fetch.value))
     end
   end
   -- Wait for 1 second.
