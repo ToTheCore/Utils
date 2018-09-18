@@ -9,7 +9,6 @@ Console.WriteLine(Console.Type.Hint, "Setting label to " .. TestServerLabel)
 shell.run("label", "set", TestServerLabel)
 
 while(true) do
-  Console.WriteLine(Console.Type.Hint, "Requesting server...")
   latestFetch = FiveDMan.Fetch()
   for num, fetch in pairs(latestFetch) do
     Console.WriteLine(Console.Type.Info, "sourcePC: " .. fetch.source .. " isScript: " .. tostring(fetch.isScript))
