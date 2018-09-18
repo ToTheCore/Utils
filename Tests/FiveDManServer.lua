@@ -12,11 +12,11 @@ while(true) do
   Console.WriteLine(Console.Type.Hint, "Requesting server...")
   latestFetch = FiveDMan.Fetch()
   for num, fetch in pairs(latestFetch) do
-    Console.WriteLine(Console.Type.Info, "sourcePC: " .. fetch.source .. " isScript: " .. fetch.isScript)
+    Console.WriteLine(Console.Type.Info, "sourcePC: " .. fetch.source .. " isScript: " .. tostring(fetch.isScript))
     if(fetch.isScript) then
       loadstring(fetch.value)
     else
-      Console.WriteLine(Console.Type.Info, "Content: " .. fetch.value)
+      Console.WriteLine(Console.Type.Info, "Content: " .. tostring(fetch.value))
     end
   end
   -- Wait for 1 second.
