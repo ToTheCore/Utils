@@ -1,14 +1,14 @@
 -- http://ruffo.ddns.net:8080/Github/ToTheCore/WebAPI/5DMAN/
 -- ToTheCore/Utils/#14
-os.loadAPI("/Utils/Utils") -- Load all Utils
+--os.loadAPI("/Utils/Utils") -- Load all Utils
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------       Config       ------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------
 --TODO: Write config manager
 --TODO: create issue for this.
-local function LoadConfig()
-  local settingsFilePath = shell.resolve("./FiveDManConfig")
+function LoadConfig()
+  settingsFilePath = shell.resolve("./FiveDManConfig")
 
   -- There is no settings file? -> create one.
   if (not fs.exists(settingsFilePath)) then
