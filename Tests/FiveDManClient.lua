@@ -37,7 +37,7 @@ while(true) do
     Console.WriteLine(Console.Type.Info, "Example content:")
     Console.WriteLine(Console.Type.Hint, example)
 
-    FiveDMan.SendScript(TestServerLabel, example)
+    FiveDMan.Send(TestServerLabel, example)
   end
 
   Console.WriteLine(Console.Type.Hint, "Done.. Check server if successfull.")
