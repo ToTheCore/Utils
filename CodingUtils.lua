@@ -30,7 +30,7 @@ end
 function http_string(url)
   resultStr = ""
   local timer = os.startTimer(120)
-  http.request(source)
+  http.request(url)
   while true do
     local event, id, data = os.pullEvent()
 
@@ -41,7 +41,7 @@ function http_string(url)
 
     -- Download failed -> error.
     if (event == "http_failure") then
-      error("Download: Faild to download file. Url: " .. source)
+      error("Download: Faild to download file. Url: " .. url)
     end
 
     if event == "http_success" then
