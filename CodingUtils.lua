@@ -51,3 +51,34 @@ function http_string(url)
     end
   end
 end
+
+function encode_url(str)
+  if (not str) then
+    return str
+  end
+
+  str = string.gsub(str, "\n", "\r\n")
+  str =
+    string.gsub(
+    str,
+    "[^%w.%-_~]",
+    function(c)
+      return string.format("%%%02X", string.byte(c))
+    end
+  )
+
+  return str
+end
+
+function decode_url(str)
+  str =
+    string.gsub(
+    str,
+    "%%([0-9a-fA-F][0-9a-fA-F])",
+    function(c)
+      return string.char(tonumber("0x" .. c))
+    end
+  )
+  str = string.gsub(str, "\n", "\r\n")
+  return str
+end

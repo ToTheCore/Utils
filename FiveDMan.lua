@@ -52,6 +52,8 @@ function Fetch()
 end
 
 function SendScript(targetLabel, scriptString)
+  scriptString = CodingUtils.encode_url(scriptString)
+  targetLabel = CodingUtils.encode_url(targetLabel)
   CodingUtils.http_string(
     FiveDManConfig.host ..
       "?command=sendScript&sourceId=" .. myId .. "&TargetLabel=" .. targetLabel .. "&Value=" .. scriptString
@@ -59,6 +61,8 @@ function SendScript(targetLabel, scriptString)
 end
 
 function Send(targetLabel, valueString)
+  valueString = CodingUtils.encode_url(valueString)
+  targetLabel = CodingUtils.encode_url(targetLabel)
   CodingUtils.http_string(
     FiveDManConfig.host ..
       "?command=sendScript&sourceId=" .. myId .. "&TargetLabel=" .. targetLabel .. "&Value=" .. valueString
