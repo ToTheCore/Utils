@@ -38,7 +38,7 @@ LoadConfig()
 
 myId = nil
 -- Register computer, get id.
-loadstring(CodingUtils.http_string(FiveDManConfig.host .. "?command=register&Label=" .. CodingUtils.encode_url(os.getComputerLabel()))()
+loadstring(CodingUtils.http_string(FiveDManConfig.host .. "?command=register&Label=" .. CodingUtils.encode_url(os.getComputerLabel())))()
 Console.WriteLine(Console.Type.Info, "FiveDManId: " .. myId)
 
 --- Returns all new messages in the following table format:
