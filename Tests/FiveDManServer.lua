@@ -2,6 +2,7 @@ os.loadAPI("/Utils/Utils") -- Load all Utils
 
 -- Test server programm. 
 local outMonitor = peripheral.wrap("top")
+outMonitor.setTextScale(0.5)
 Console.SetDefaultForTerm(outMonitor or term)
 
 local TestServerLabel = "TEST_SERVER1"
